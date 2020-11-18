@@ -10,6 +10,6 @@ requests_mock
 selenium
 Appium-Python-Client
 PyVirtualDisplay
-PyHamcrest
+PyHamcrest2.0.1
 pylint
 xlrd
