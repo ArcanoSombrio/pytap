@@ -36,10 +36,10 @@ def get_payload_path(file):
     if get_operational_system() == "Linux":
         way = os.popen('pwd').read()
         if Settings.execution_model == "pytest":
-            payload = way.replace('\n', '/definitions/pytest/api/page/payload/' + file).strip()
+            payload = way.replace('\n', 'definitions/pytest/api/page/payload/' + file).strip()
             return str(payload)
         elif Settings.execution_model == "behave":
-            payload = way.replace('\n', '/definitions/behave/api/page/payload/' + file).strip()
+            payload = way.replace('\n', 'definitions/behave/api/page/payload/' + file).strip()
             return str(payload)
     elif get_operational_system() == "Windows":
         way = os.popen('cd ,').read()
@@ -56,10 +56,10 @@ def get_headers_path():
     if get_operational_system() == "Linux":
         way = os.popen('pwd').read()
         if Settings.execution_model == "pytest":
-            headers = way.replace('\n', '/definitions/pytest/api/page/headers.json').strip()
+            headers = way.replace('\n', 'definitions/pytest/api/page/headers.json').strip()
             return str(headers)
         elif Settings.execution_model == "behave":
-            headers = way.replace('\n', '/definitions/behave/api/page/headers.json').strip()
+            headers = way.replace('\n', 'definitions/behave/api/page/headers.json').strip()
             return str(headers)
     elif get_operational_system() == "Windows":
         way = os.popen('cd ,').read()
@@ -76,10 +76,10 @@ def get_authentication_path():
     if get_operational_system() == "Linux":
         way = os.popen('pwd').read()
         if Settings.execution_model == "pytest":
-            authentication = way.replace('\n', '/definitions/pytest/api/page/authentication.json').strip()
+            authentication = way.replace('\n', 'definitions/pytest/api/page/authentication.json').strip()
             return str(authentication)
         elif Settings.execution_model == "behave":
-            authentication = way.replace('\n', '/definitions/behave/api/page/authentication.json').strip()
+            authentication = way.replace('\n', 'definitions/behave/api/page/authentication.json').strip()
             return str(authentication)
     elif get_operational_system() == "Windows":
         way = os.popen('cd ,').read()
@@ -95,7 +95,7 @@ def get_authentication_path():
 def get_allure_path():
     if get_operational_system() == "Linux":
         way = os.popen('pwd').read()
-        allure = way.replace('\n', '/lib/tools/allure/bin/allure').strip()
+        allure = way.replace('\n', 'lib/tools/allure/bin/allure').strip()
         return str(allure)
     elif get_operational_system() == "Windows":
         way = os.popen('cd ,').read()
@@ -108,10 +108,10 @@ def get_reports_path(type):
     if get_operational_system() == "Linux":
         way = os.popen('pwd').read()
         if type == "allure":
-            reports = way.replace('\n', '/reports/allure/').strip()
+            reports = way.replace('\n', 'reports/allure/').strip()
             return str(reports)
         elif type == "json":
-            reports = way.replace('\n', '/reports/json/').strip()
+            reports = way.replace('\n', 'reports/json/').strip()
             return str(reports)
         else:
             raise Exception('Os tipos de reports suportados são JSON e Allure. Favor escolher uma opção disponível.')
@@ -131,7 +131,7 @@ def get_reports_path(type):
 def get_features_path():
     if get_operational_system() == "Linux":
         way = os.popen('pwd').read()
-        features = way.replace('\n', '/definitions/behave/%s/features/' % get_platform_path()).strip()
+        features = way.replace('\n', 'definitions/behave/%s/features/' % get_platform_path()).strip()
         return str(features)
     elif get_operational_system() == "Windows":
         way = os.popen('cd ,').read()
@@ -143,7 +143,7 @@ def get_features_path():
 def get_chromedriver_path():
     if get_operational_system() == "Linux":
         way = os.popen('pwd').read()
-        chromedriver = way.replace('\n', '/lib/runner/drivers/chromedriver/chromedriver').strip()
+        chromedriver = way.replace('\n', 'lib/runner/drivers/chromedriver/chromedriver').strip()
         return str(chromedriver)
     elif get_operational_system() == "Windows":
         way = os.popen('cd ,').read()
@@ -155,7 +155,7 @@ def get_chromedriver_path():
 def get_geckodriver_path():
     if get_operational_system() == "Linux":
         way = os.popen('pwd').read()
-        geckodriver = way.replace('\n', '/lib/runner/drivers/geckodriver/geckodriver').strip()
+        geckodriver = way.replace('\n', 'lib/runner/drivers/geckodriver/geckodriver').strip()
         return str(geckodriver)
     elif get_operational_system() == "Windows":
         way = os.popen('cd ,').read()
@@ -187,7 +187,7 @@ def get_winiumdriver_path():
 def get_settings_path():
     if get_operational_system() == "Linux":
         way = os.popen('pwd').read()
-        settings = way.replace('\n', '/settings/settings.json').strip()
+        settings = way.replace('\n', 'settings/settings.json').strip()
         return str(settings)
     elif get_operational_system() == "Windows":
         way = os.popen('cd ,').read()
@@ -199,7 +199,7 @@ def get_settings_path():
 def get_screenshot_path():
     if get_operational_system() == "Linux":
         way = os.popen('pwd').read()
-        settings = way.replace('\n', '/reports/screenshot_%s' % get_date_time_now(True) + '.png').strip()
+        settings = way.replace('\n', 'reports/screenshot_%s' % get_date_time_now(True) + '.png').strip()
         return str(settings)
     elif get_operational_system() == "Windows":
         way = os.popen('cd ,').read()
@@ -212,10 +212,10 @@ def get_tests_path():
     if get_operational_system() == "Linux":
         way = os.popen('pwd').read()
         if Settings.execution_model == "pytest":
-            tests = way.replace('\n', '/definitions/pytest/%s/tests/steps/' % get_platform_path()).strip()
+            tests = way.replace('\n', 'definitions/pytest/%s/tests/steps/' % get_platform_path()).strip()
             return str(tests)
         elif Settings.execution_model == "behave":
-            tests = way.replace('\n', '/definitions/behave/%s/tests/steps/' % get_platform_path()).strip()
+            tests = way.replace('\n', 'definitions/behave/%s/tests/steps/' % get_platform_path()).strip()
             return str(tests)
     elif get_operational_system() == "Windows":
         way = os.popen('cd ,').read()
@@ -231,10 +231,10 @@ def get_lint_path():
     if get_operational_system() == "Linux":
         way = os.popen('pwd').read()
         if Settings.execution_model == "pytest":
-            tests = way.replace('\n', '/definitions/pytest/%s/tests/' % get_platform_path()).strip()
+            tests = way.replace('\n', 'definitions/pytest/%s/tests/' % get_platform_path()).strip()
             return str(tests)
         elif Settings.execution_model == "behave":
-            tests = way.replace('\n', '/definitions/behave/%s/tests/' % get_platform_path()).strip()
+            tests = way.replace('\n', 'definitions/behave/%s/tests/' % get_platform_path()).strip()
             return str(tests)
     elif get_operational_system() == "Windows":
         way = os.popen('cd ,').read()
