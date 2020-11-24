@@ -20,8 +20,8 @@ class Execute:
     @staticmethod
     def execute_tests_with_settings(test_stories_list):
         try:
+            Interact.stop_allure_serve()
             if Settings.execution_model == "pytest":
-                Interact.stop_allure_serve()
                 for test in test_stories_list:
                     pytest_main(
                         [
@@ -33,9 +33,7 @@ class Execute:
                             '--disable-warnings'
                         ]
                     )
-                    Interact.start_allure_serve()
             elif Settings.execution_model == "behave":
-                Interact.stop_allure_serve()
                 for story in test_stories_list:
                     behave_main(
                         [
@@ -55,7 +53,7 @@ class Execute:
                             '--show-timings'
                         ]
                     )
-                Interact.start_allure_serve()
+            Interact.start_allure_serve()
         except Exception as e:
             if Settings.platform in ("firefox", "chrome", "edge", "desktop"):
                 Interact.get_screenshot()
