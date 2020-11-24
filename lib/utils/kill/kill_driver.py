@@ -8,9 +8,9 @@ from lib.utils.settings.settings import Settings
 def kill_driver():
     def kill_linux():
         if Settings.platform == "firefox":
-            os.popen('killall geckodriver')
+            os.popen('pkill -f "geckodriver"')
         elif Settings.platform == "chrome":
-            os.popen('killall chromedriver')
+            os.popen('pkill -f "chromedriver"')
 
     def kill_windows():
         if Settings.platform == "firefox":
