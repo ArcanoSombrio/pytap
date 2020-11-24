@@ -15,7 +15,7 @@ def open_serve():
 def stop_serve():
     try:
         if get_operational_system() == "Linux":
-            os.popen('killall java')
+            os.popen('pkill -f "java"')
         elif get_operational_system() == "Windows":
             os.popen('taskkill /f /im java.exe')
     except Exception as e:
