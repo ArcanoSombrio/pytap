@@ -1,0 +1,7 @@
+{
+  "headers": {
+    "content-type": "application/json",
+    "authorization": "Bearer ",
+    "accept": "application/json"
+  }
+}

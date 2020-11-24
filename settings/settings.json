@@ -1,0 +1,16 @@
+{
+    "platform_settings": {
+        "platform": "chrome",
+        "application_path": "",
+        "platform_name": "",
+        "platform_version": "",
+        "device_name": "",
+        "application_package": "",
+        "application_activity": "",
+        "automation_name": "",
+        "app": ""
+    },
+    "execution_model": "behave",
+    "headless": false,
+    "lint": false
+}

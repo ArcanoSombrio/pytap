@@ -1,0 +1,16 @@
+behave
+behave_restful
+allure-behave
+allure-pytest
+pytest
+pytest-json
+pytest-cov
+pypac
+requests_mock
+selenium
+Appium-Python-Client
+PyVirtualDisplay
+PyHamcrest
+pylint
+xlrd
+requests
