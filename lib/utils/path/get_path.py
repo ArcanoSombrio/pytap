@@ -199,11 +199,11 @@ def get_settings_path():
 def get_screenshot_path():
     if get_operational_system() == "Linux":
         way = os.popen('pwd').read()
-        settings = way.replace('\n', '/reports/screenshot_%s' % get_date_time_now(True) + '.png').strip()
+        settings = way.replace('\n', '/reports/screenshot/screenshot_%s' % get_date_time_now(True) + '.png').strip()
         return str(settings)
     elif get_operational_system() == "Windows":
         way = os.popen('cd ,').read()
-        settings = way.strip() + "\\reports\\screenshot_%s" % get_date_time_now(True) + ".png"
+        settings = way.strip() + "\\reports\\screenshot\\screenshot_%s" % get_date_time_now(True) + ".png"
         return str(settings)
 
 
