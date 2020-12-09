@@ -34,7 +34,7 @@
 ### Disposição das funcionalidades
 
     Plataformas suportadas:
-        - Aplicações Web (Browsers suportados: Firefox, Chrome e Edge)
+        - Aplicações Web (Browsers suportados: Firefox, Chrome, Edge, Internet Explorer e Opera)
         - Aplicações Mobile (S.O's suportados: Android e iOS)
         - Service API
         - Desktop Windows
