@@ -40,7 +40,7 @@
         - Desktop Windows
 
     Funcionalidades:
-        - Execução de testes de frontend em Firefox, Chrome e Edge por meio do Selenium
+        - Execução de testes de frontend em Firefox, Chrome, Edge, Internet Explorer e Opera por meio do Selenium
         - Execução de testes de API por meio do PyPac
         - Execução de testes Desktop com Winium (Implementação do Selenium para aplicações nativas do Windows)
         - Execução de testes Mobile em Android ou iOS com Appium
@@ -49,7 +49,8 @@
         - Execução de testes com Pytest
         - Reports com Allure
         - Resports em JSON
-        - Integração com X-Ray do Jira por meio de REST
+        - Suporte a integração com Jira X-Ray
+        - Suporte a integração com Silk
         - Dockerfile para instalar dependências da plataforma em containers para execução de CI
         - Captura de dados a partir de arquivos excel para DDT
         - Captura de tela em erros na execução dos testes Web e Desktop
