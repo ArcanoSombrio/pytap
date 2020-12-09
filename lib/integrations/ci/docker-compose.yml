@@ -7,7 +7,7 @@ services:
       args:
         - proxy=${proxy}
         - git_url=${git_url}
-        - workspaces=${workpspaces}
+        - workspaces=${workspaces}
         - pip_proxy_conf=${pip_proxy_conf}
     depends_on:
       - python
