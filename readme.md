@@ -198,7 +198,7 @@
 ### Possibilidades para o arquivo settings.json
     {
         "platform_settings": {
-            "platform": "api", ["api", "chrome", "firefox", "edge", "mobile", "desktop"]
+            "platform": "api", ["api", "chrome", "firefox", "edge", "ie", "opera", "mobile", "desktop"]
             "application_path": "", ["Caminho do executável da aplicação Windows caso a plataforma seja Desktop"]
             "platform_name": "", ["Nome da plataforma Android ou iOS"]
             "platform_version": "", ["Versão do sistema operacional Android ou iOS"]
