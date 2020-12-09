@@ -11,3 +11,6 @@ services:
         - pip_proxy_conf=${pip_proxy_conf}
     depends_on:
       - python
+
+  python:
+    image: python:3.8.5-buster
