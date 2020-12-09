@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  pytap:
+    container_name: "pytap"
+    build:
+      context: .
+      args:
+        - proxy=${proxy}
+        - git_url=${git_url}
+        - workspaces=${workpspaces}
+        - pip_proxy_conf=${pip_proxy_conf}
+    depends_on:
+      - python

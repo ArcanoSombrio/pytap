@@ -1,0 +1,25 @@
+{
+    "platform_settings": {
+        "platform": "mobile",
+        "application_path": "C:\\Windows\\System32\\calc.exe",
+        "command_executor": "https://mobilecenter.itau:443/wd/hub",
+        "platform_name": "Android",
+        "platform_version": "10",
+        "device_name": "SM-A505GT",
+        "application_package": "com.itaucard.activity",
+        "application_activity": "br.com.itau.cartoes.presentation.splash.SplashActivity",
+        "automation_name": "",
+        "browser_name": "",
+        "app": "",
+        "no_reset": "true",
+        "oauth_client_id": "oauth2-L0DFc1civWkfpnSecnCO@microfocus.com",
+        "oauth_client_secret": "XyLPWycnrGpHNn0tLAnR",
+        "tenant_id": "999999999",
+        "workspace_name": "Default workspace",
+        "auto_grant_permissions": "true",
+        "udid": "RQ8MC07T8FH"
+    },
+    "execution_model": "behave",
+    "headless": false,
+    "lint": false
+}
