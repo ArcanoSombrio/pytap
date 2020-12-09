@@ -39,6 +39,10 @@ class Interact:
             instance.chrome_driver()
         elif Settings.platform == "edge":
             instance.edge_driver()
+        elif Settings.platform == "ie":
+            instance.ie_driver()
+        elif Settings.platform == "opera":
+            instance.opera_driver()
         elif Settings.platform == "desktop":
             instance.winium_driver()
         elif Settings.platform == "mobile":
@@ -55,7 +59,7 @@ class Interact:
             Interact()
             time_sleep(3)
         elif Settings.headless:
-            if Settings.platform in ("firefox", "chrome", "edge"):
+            if Settings.platform in ("firefox", "chrome", "edge", "ie", "opera"):
                 open_display()
                 Interact()
                 time_sleep(3)
@@ -66,7 +70,7 @@ class Interact:
     # Método estático que realiza o teardown e mata os processos do driver na plataforma configurada
     @staticmethod
     def teardown():
-        if Settings.platform in ("firefox", "chrome", "edge"):
+        if Settings.platform in ("firefox", "chrome", "edge", "ie", "opera"):
             try:
                 Interact.close_browser()
             except WebDriverException:

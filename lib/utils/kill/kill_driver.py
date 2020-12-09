@@ -15,6 +15,10 @@ def kill_driver():
             pid = os.popen('pgrep -x chromedriver').read()
             if pid is not None or pid != '':
                 os.popen('pkill -f "chromedriver"')
+        elif Settings.platform == "opera":
+            pid = os.popen('pgrep -x operadriver').read()
+            if pid is not None or pid != '':
+                os.popen('pkill -f "operadriver"')
 
     def kill_windows():
         if Settings.platform == "firefox":
@@ -33,6 +37,14 @@ def kill_driver():
             pid = os.popen('tasklist | find /i "MicrosoftWebDriver.exe"').read()
             if pid is not None or pid != '':
                 os.popen('taskkill /f /im MicrosoftWebDriver.exe')
+        elif Settings.platform == "ie":
+            pid = os.popen('tasklist | find /i "IEDriverServer.exe"').read()
+            if pid is not None or pid != '':
+                os.popen('taskkill /f /im IEDriverServer.exe')
+        elif Settings.platform == "opera":
+            pid = os.popen('tasklist | find /i "operadriver.exe"').read()
+            if pid is not None or pid != '':
+                os.popen('taskkill /f /im operadriver.exe')
 
     if get_operational_system() == "Linux":
         kill_linux()

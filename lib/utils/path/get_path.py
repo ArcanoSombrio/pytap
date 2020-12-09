@@ -7,7 +7,7 @@ from lib.utils.settings.settings import Settings
 
 # Função que retorna o nome da plataforma para concatenação no caminho dos testes
 def get_platform_path():
-    if Settings.platform in ("firefox", "chrome", "edge"):
+    if Settings.platform in ("firefox", "chrome", "edge", "ie", "opera"):
         return 'web'
     elif Settings.platform == "desktop":
         return 'desktop'
@@ -177,6 +177,28 @@ def get_msdriver_path():
         way = os.popen('cd ,').read()
         msdriver = way.strip() + "\\lib\\runner\\drivers\\msedgedriver\\MicrosoftWebDriver.exe"
         return str(msdriver)
+
+
+# Função que retorna o caminho do executável do IEDriverServer para instanciamento do selenium no Internet Explorer
+def get_iedriver_path():
+    if get_operational_system() != "Windows":
+        raise Exception("Este sistema operacional não é suportado!")
+    else:
+        way = os.popen('cd ,').read()
+        iedriver = way.strip() + "\\lib\\runner\\drivers\\iedriver\\IEDriverServer.exe"
+        return str(iedriver)
+
+
+# Função que retorna o caminho do executável do operadriver para instanciamento do selenium no Opera
+def get_operadriver_path():
+    if get_operational_system() == "Linux":
+        way = os.popen('pwd').read()
+        operadriver = way.replace('\n', '/lib/runner/drivers/operadriver/operadriver').strip()
+        return str(operadriver)
+    elif get_operational_system() == "Windows":
+        way = os.popen('cd ,').read()
+        operadriver = way.strip() + "\\lib\\runner\\drivers\\operadriver\\operadriver.exe"
+        return str(operadriver)
 
 
 # Função que retorna o caminho do executável do Winium.Desktop.Driver para instanciamento do selenium em Desktop

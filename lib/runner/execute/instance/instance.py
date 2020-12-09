@@ -10,8 +10,8 @@ from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from lib.utils.settings.settings import Settings
 from lib.utils.validate.validate_status_code import validate_status_code
 from lib.utils.os.get_operational_system import get_operational_system
-from lib.utils.path.get_path import get_msdriver_path, get_geckodriver_path
-from lib.utils.path.get_path import get_chromedriver_path, get_winiumdriver_path
+from lib.utils.path.get_path import get_msdriver_path, get_geckodriver_path, get_iedriver_path
+from lib.utils.path.get_path import get_chromedriver_path, get_winiumdriver_path, get_operadriver_path
 
 
 # Classe que cria a instância dos drivers do Selenium para cada platafoma
@@ -55,6 +55,19 @@ class Instance:
     def edge_driver(self):
         os.popen(get_msdriver_path())
         self.driver = selenium_driver.Edge()
+        self.driver.maximize_window()
+
+    # Função que cria a instância do driver do Selenium para o navegador Internet Explorer
+    def ie_driver(self):
+        os.popen(get_iedriver_path())
+        self.driver = selenium_driver.Ie()
+        self.driver.maximize_window()
+
+    # Função que cria a instância do driver do Selenium para o navegador Opera
+    def opera_driver(self):
+        self.driver = selenium_driver.Opera(
+            executable_path=r'' + get_operadriver_path()
+        )
         self.driver.maximize_window()
 
     # Função que cria a instância do driver do Selenium para aplicações Desktop

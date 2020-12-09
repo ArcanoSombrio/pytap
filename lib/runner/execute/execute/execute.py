@@ -63,7 +63,7 @@ class Execute:
                     )
             Interact.start_allure_serve()
         except Exception as e:
-            if Settings.platform in ("firefox", "chrome", "edge", "desktop", "mobile"):
+            if Settings.platform in ("firefox", "chrome", "edge", "ie", "opera", "desktop", "mobile"):
                 Interact.get_screenshot()
                 Interact.teardown()
                 print(e)

@@ -13,7 +13,7 @@ def get_model_settings():
 def get_platform_settings():
     settings = load_json_file(get_settings_path())
     Settings.platform = settings["platform_settings"]["platform"]
-    if Settings.platform in ("firefox", "chrome", "edge"):
+    if Settings.platform in ("firefox", "chrome", "edge", "ie", "opera"):
         pass
     elif Settings.platform == "mobile":
         Settings.platform_name = settings["platform_settings"]["platform_name"]
