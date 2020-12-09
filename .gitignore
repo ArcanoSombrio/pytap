@@ -1,0 +1,7 @@
+.coverage
+__pycache__
+*/__pycache__
+/reports/allure/
+/reports/json/
+/reports/junit/
+/reports/screenshot/
