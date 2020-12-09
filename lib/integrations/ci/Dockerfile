@@ -33,7 +33,7 @@ RUN apt -o Acquire::http::proxy=$proxy \
 RUN git config --global http.sslVerify false
 
 # Clonar o projeto e instalar dependências do projeto no Python
-RUN mkdir -p '$workspaces' && cd $workspaces && git clone $git_url
+RUN mkdir -p $workspaces && cd $workspaces && git clone $git_url
 RUN sudo python3.8 -m pip install --upgrade pip && sudo python3.8 -m pip install -r $workspaces/pytap/requirements.txt
 
 # Criar variável de ambiente para Workspaces
