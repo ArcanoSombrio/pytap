@@ -206,7 +206,14 @@
             "application_package": "", ["Pacote da aplicação Android"]
             "application_activity": "", ["Activity da aplicação Android"]
             "automation_name": "", ["Engine de automação ("Appium", "UiAutomator2", "Espresso", "UiAutomator1", "XCUITest")"]
-            "app": "" ["Caminho ou URL do executável da aplicação Android ou iOS"]
+            "app": "", ["Caminho ou URL do executável da aplicação Android ou iOS"]
+            "no_reset": "", ["Resetar dados da aplicação true para sim ou false para não"]
+            "oauth_client_id": "", ["Client ID gerado no Mobile Center"]
+            "oauth_client_secret": "", ["Client Secret Key gerado no Mobile Center"]
+            "tenant_id": "", ["ID gerado no Mobile Center"]
+            "workspace_name": "", ["Nome da Workspace gerada no Mobile Center"]
+            "auto_grant_permissions": "", ["Garantir permissões automaticamente true para sim ou false para não"]
+            "udid": "" ["UDID no aparelho no Mobile Center"]
         },
         "execution_model": "behave", ["Modelo de execução dos testes "behave" para BDD, "pytest" para Pytest"]
         "headless": false ["true para execução sem interface, false para execução com interface"]
@@ -242,6 +249,8 @@
         - Firefox: https://github.com/mozilla/geckodriver/releases
         - Chrome: https://chromedriver.chromium.org/downloads
         - Edge: https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+        - Internet Explorer: https://www.selenium.dev/downloads/
+        - Opera: https://github.com/operasoftware/operachromiumdriver/releases
         - Desktop Windows: https://github.com/2gis/Winium.Desktop/releases
 
 
