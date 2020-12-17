@@ -252,7 +252,7 @@
                 }
             }
         }
-    Vale ressaltar também que os executáveis dos drivers para instância dos navegadores Web: Firefox, Chrome e Edge devem ser atualizados manualmente conforme necessidade.
+    Vale ressaltar também que os executáveis dos drivers para instância dos navegadores Web: Firefox, Chrome, Edge, Internet Explorer e Opera devem ser atualizados manualmente conforme necessidade. (Válido somente para ambiente do banco, caso esteja em ambiente Zup, basta substituir na instância as linhas comentadas referentes ao WebDriver Manager para cada navegador, assim será instalado de acordo com a versão do navegador no seu sistema operacional, a versão correspondente do driver do Selenium)
     Links para download dos drivers atualizados ou em versões correspondentes: 
         - Firefox: https://github.com/mozilla/geckodriver/releases
         - Chrome: https://chromedriver.chromium.org/downloads
