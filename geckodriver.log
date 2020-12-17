@@ -1,0 +1,10 @@
+1608226896863	geckodriver	INFO	Listening on 127.0.0.1:37573
+1608226896879	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile6iWLPD"
+1608226900107	Marionette	INFO	Listening on port 37095
+1608226900189	Marionette	WARN	TLS certificate errors will be ignored for this session
+1608226905495	Marionette	INFO	Stopped listening on port 37095
+1608227674219	geckodriver	INFO	Listening on 127.0.0.1:48225
+1608227675249	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile9xHKdp"
+1608227678841	Marionette	INFO	Listening on port 33101
+1608227678862	Marionette	WARN	TLS certificate errors will be ignored for this session
+1608227684189	Marionette	INFO	Stopped listening on port 33101

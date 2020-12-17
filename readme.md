@@ -150,8 +150,13 @@
                     - geckodriver (Diretório onde se encontra o executável Windows e Linux do driver para Firefox)
                         - geckodriver.exe (Executável Windows do driver do Selenium para Firefox)
                         - geckodriver (Executável Linux do driver do Selenium para Firefox)
+                    - iedriver (Diretório onde se encontra o executável Windows do driver para Internet Explorer)
+                        - IEDriverServer.exe ((Executável Windows do driver do Selenium para Internet Explorer)
                     - msdriver (Diretório onde se encontra o executável Windows do driver para Edge)
                         - MicrosoftWebDriver.exe (Executável Windows do driver do Selenium para Edge)
+                    - operadriver (Diretório onde se encontra o executável Windows e Linux do driver para Opera)
+                        - operadriver.exe (Executável Windows do driver do Selenium para Opera)
+                        - operadriver (Executável Linux do driver do Selenium para Opera)
                     - winiumdriver (Diretório onde se encontra o executável Windows do driver para Desktop Application)
                         - Winium.Desktop.Driver.exe (Executável Windows do driver do Selenium para Desktop Application)
                 - execute (Diretório onde se encontram as implementações e abstrações das funções de testes)
@@ -182,6 +187,8 @@
                     - get_operational_system.py (Arquivo de classe com implementação da função para identificação do S.O corrente)
                 - path (Diretório com implementação de funções para captura de diretórios utilizados no projeto)
                     - get_path (Arquivo de classe com implementação da função para captura dos diretórios)
+                - rename (Diretório com implementação de função de troca no nome de arquivos)
+                    - rename_file.py (Arquivo de classe com implementação de função para troca de nome de arquivos)
                 - reports (Diretório com implementação de funções para start e stop do Allure pós execução dos testes)
                     - allure_serve.py (Arquivo de classe com implementação das funções de start e stop do Allure)
                 - settings (Diretório com a classe onde são salvas as configurações do arquivo settings.json)
@@ -224,7 +231,7 @@
 ---
 ## Iteração dos testes
 ### Testes Web, Mobile, Desktop e API
-    - Sempre que escrever um teste, o correto é importar a classe Interact do arquivo de classe interact.py.
+    - Sempre que escrever um teste, importar a classe Interact do arquivo de classe interact.py.
     - Neste arquivo está toda a abstração das funções mais úteis do Selenium. 
     - Para utilizar basta chamar a função da classe e passar os parâmetros.
     - As funções do Selenium estão tratando os problemas de não encontro de elementos nas aplicações.
