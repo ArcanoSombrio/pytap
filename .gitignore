@@ -5,3 +5,4 @@ __pycache__
 /reports/json/
 /reports/junit/
 /reports/screenshot/
+geckodriver.log
