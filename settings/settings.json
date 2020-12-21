@@ -20,6 +20,6 @@
         "udid": "RQ8MC07T8FH"
     },
     "execution_model": "behave",
-    "headless": false,
+    "headless": true,
     "lint": false
 }
