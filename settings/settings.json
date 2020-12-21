@@ -1,6 +1,6 @@
 {
     "platform_settings": {
-        "platform": "chrome",
+        "platform": "firefox",
         "application_path": "C:\\Windows\\System32\\calc.exe",
         "command_executor": "https://mobilecenter.itau:443/wd/hub",
         "platform_name": "Android",
