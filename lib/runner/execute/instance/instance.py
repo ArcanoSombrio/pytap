@@ -32,7 +32,7 @@ class Instance:
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument('--no-sandbox')
         self.driver = selenium_driver.Chrome(
-            get_chromedriver_path(),  # ChromeDriverManager().install(),
+            ChromeDriverManager().install(),  # get_chromedriver_path(),
             chrome_options=chrome_options
         )
         self.driver.maximize_window()
@@ -53,29 +53,29 @@ class Instance:
         self.driver = selenium_driver.Firefox(
             capabilities=capabilities,
             firefox_profile=firefox_profile,
-            executable_path=r'' + get_geckodriver_path()  # GeckoDriverManager().install()
+            executable_path=r'' + GeckoDriverManager().install()  # get_geckodriver_path()
         )
 
     # Função que cria a instância do driver do Selenium para o navegador Edge
     def edge_driver(self):
-        os.popen(get_msdriver_path())
+        # os.popen(get_msdriver_path())
         self.driver = selenium_driver.Edge(
-            # executable_path=r'' + EdgeChromiumDriverManager().install()
+            executable_path=r'' + EdgeChromiumDriverManager().install()
         )
         self.driver.maximize_window()
 
     # Função que cria a instância do driver do Selenium para o navegador Internet Explorer
     def ie_driver(self):
-        os.popen(get_iedriver_path())
+        # os.popen(get_iedriver_path())
         self.driver = selenium_driver.Ie(
-            # executable_path=r'' + IEDriverManager().install()
+            executable_path=r'' + IEDriverManager().install()
         )
         self.driver.maximize_window()
 
     # Função que cria a instância do driver do Selenium para o navegador Opera
     def opera_driver(self):
         self.driver = selenium_driver.Opera(
-            executable_path=r'' + get_operadriver_path()  # OperaDriverManager().install()
+            executable_path=r'' + OperaDriverManager().install()  # get_operadriver_path()
         )
         self.driver.maximize_window()
 
