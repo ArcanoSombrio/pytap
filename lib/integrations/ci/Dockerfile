@@ -8,6 +8,7 @@ LABEL maintener="daniel.ferreira@zup.com.br"
 ARG proxy
 ARG git_url
 ARG workspaces
+ARG downloads
 ARG pip_proxy_conf
 
 # Ajustar fuso horário
@@ -32,12 +33,16 @@ RUN apt -o Acquire::http::proxy=$proxy \
 # Configurar verificação de SSL no Git
 RUN git config --global http.sslVerify false
 
+# Criar diretório de Downloads na $HOME
+RUN mkdir -p $downloads
+
 # Clonar o projeto e instalar dependências do projeto no Python
 RUN mkdir -p $workspaces && cd $workspaces && git clone $git_url
 RUN sudo python3.8 -m pip install --upgrade pip && sudo python3.8 -m pip install -r $workspaces/pytap/requirements.txt
 
-# Criar variável de ambiente para Workspaces
+# Criar variável de ambiente para Workspaces e Downloads
 ENV workspaces=$workspaces
+ENV downloads=$downloads
 
 # Configurar execução do projeto
 CMD ["/bin/bash", "-c", "cd $workspaces/pytap/ && python3.8 main.py"]
