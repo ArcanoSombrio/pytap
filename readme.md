@@ -224,7 +224,8 @@
             "udid": "" ["UDID no aparelho no Mobile Center"]
         },
         "execution_model": "behave", ["Modelo de execução dos testes "behave" para BDD, "pytest" para Pytest"]
-        "headless": false ["true para execução sem interface, false para execução com interface"]
+        "headless": false, ["true para execução sem interface, false para execução com interface"]
+        "lint": false ["true para execução da verificação, false para não execução da verificação"]
     }
 
 
