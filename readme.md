@@ -196,7 +196,7 @@
                 - sleep (Diretótio com implementação da função de pausa na execução em segundos predefinidos)
                     - time_sleep.py (Arquivo de classe com implementação da função para pausa na execução)
                 - validate (Diretório com implementação da função que valida o status code da requisição)
-                    - calidate_status_code.py (Arquivo de classe com implementação da função para validação do status code da requisição)
+                    - validate_status_code.py (Arquivo de classe com implementação da função para validação do status code da requisição)
                 - verify (Diretório com implementação de função que verifica a existência de um diretório ou arquivo)
                     - verify_path_exists.py (Arquivo de classe com implementação da função para validação de existência de um arquivo ou diretório)
 
