@@ -25,6 +25,7 @@ class Instance:
     # Função principal que seta a variável driver que receberá a instância do Selenium
     def __init__(self):
         self.driver = self.driver
+        os.environ['WDM_LOG_LEVEL'] = '0'
 
     # Função que cria a instância do driver do Selenium para o navegador Chrome
     def chrome_driver(self):
