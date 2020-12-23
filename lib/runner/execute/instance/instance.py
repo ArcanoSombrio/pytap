@@ -29,7 +29,6 @@ class Instance:
 
     # Função que cria a instância do driver do Selenium para o navegador Chrome
     def chrome_driver(self):
-
         chrome_options = webdriver.ChromeOptions()
         chrome_options.add_argument('--no-sandbox')
         self.driver = selenium_driver.Chrome(
@@ -45,14 +44,7 @@ class Instance:
             'webdriver.load.strategy',
             'unstable'
         )
-        capabilities = DesiredCapabilities().FIREFOX
-        if get_operational_system() == "Linux":
-            capabilities["marionette"] = True
-        elif get_operational_system() == "Windows":
-            capabilities["marionette"] = False
-
         self.driver = selenium_driver.Firefox(
-            capabilities=capabilities,
             firefox_profile=firefox_profile,
             executable_path=r'' + GeckoDriverManager().install()  # get_geckodriver_path()
         )
